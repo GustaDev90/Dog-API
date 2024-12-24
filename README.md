@@ -1,6 +1,6 @@
 # 🐺 Dog API
 
-Bem-vindo ao **Dog API**, uma aplicação que busca a Dog API. 🐶
+Bem-vindo ao **Dog API**, uma aplicação que interage com a API do Dog CEO's Dog. 🐶
 
 ---
 
