@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useMemo } from "react";
+import { useEffect, useState } from "react";
 
 export default function Home () {
  const [animal, setAnimal] = useState([]);
@@ -25,13 +25,10 @@ export default function Home () {
     loadAPI();
  }, [])
 
- const Animals = useMemo(() => animal.length, [animal]);
-
   return (
     <div className="container">
         <h1>Dog API</h1>
         <strong>Clique na imagem para ver outro cachorro 🐶 </strong>
-        <strong>Animal: {Animals}</strong>
        <header>
         <img
           src={animal} 
