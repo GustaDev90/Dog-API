@@ -1,4 +1,4 @@
-# 📝 Dog API
+# 🐺 Dog API
 
 Bem-vindo ao **Dog API**, uma aplicação que busca a Dog API. 🐶
 
