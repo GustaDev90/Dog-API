@@ -33,8 +33,6 @@ export default function Home () {
         <img
           src={animal} 
           alt="Imagem de cachorro" 
-          width={500}
-          height={500} 
           onClick={loadAPI} 
         />
         </header>
