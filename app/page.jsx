@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 
 export default function Home () {
  const [animal, setAnimal] = useState([]);
+ const [loading, setLoading] = useState("");
 
  async function loadAPI () {
     try {
@@ -25,12 +26,10 @@ export default function Home () {
     loadAPI();
  }, [])
 
- if (!animal) {
-   return (
-     <div className="loading">
-       <h1>Carregando...</h1>
-     </div>
-   )
+ const handleLoading = () => {
+   if (!animal) {
+    setLoading("Carregando...")
+   }
  }
 
   return (
@@ -40,7 +39,7 @@ export default function Home () {
        <header>
         <img
           src={animal} 
-          alt="Imagem de cachorro" 
+          alt={loading}
           onClick={loadAPI} 
         />
         </header>
