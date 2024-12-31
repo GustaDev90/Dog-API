@@ -26,10 +26,12 @@ export default function Home () {
     loadAPI();
  }, [])
 
- const handleLoading = () => {
-   if (!animal) {
-    setLoading("Carregando...")
-   }
+ if (!animal) {
+   return (
+    <div className="loading">
+      <h1>Carregando...</h1>
+    </div>
+   )
  }
 
   return (
@@ -39,7 +41,7 @@ export default function Home () {
        <header>
         <img
           src={animal} 
-          alt={loading}
+          alt="imagem de cachorro"
           onClick={loadAPI} 
         />
         </header>
