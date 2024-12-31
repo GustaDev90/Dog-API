@@ -25,6 +25,14 @@ export default function Home () {
     loadAPI();
  }, [])
 
+ if (!animal) {
+   return (
+     <div className="loading">
+       <h1>Carregando...</h1>
+     </div>
+   )
+ }
+
   return (
     <div className="container">
         <h1>Dog API</h1>
