@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 export default function Home () {
  const [animal, setAnimal] = useState([]);
  const [loading, setLoading] = useState("");
+ const [error, setError] = useState("");
 
  async function loadAPI () {
     try {
@@ -14,11 +15,11 @@ export default function Home () {
         setAnimal(data.message);
 
     if (!response.ok) {
-        throw new Error("Erro ao buscar os dados da API");
+        throw new Error(`HTTP ERROR:" ${response.status}`);
     } 
 
     } catch (error) {
-        console.error(error);
+        setError("Error" + error.message);
     }
  }
 
